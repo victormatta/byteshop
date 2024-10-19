@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginPageController;
+use App\Http\Controllers\RegisterPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,5 @@ use App\Http\Controllers\LoginPageController;
 */
 
 Route::get('/', [LoginPageController::class, 'index']);
+
+Route::get('/register', [RegisterPageController::class, 'index'])->name('static.registerPage');
